@@ -10,7 +10,7 @@ const checkoutSchema = z.object({
   email: z.string(),
   paymentMethod: z.string().min(1, "metodo de pago"),
   acceptedTerms: z.literal(true, {
-    message: "Debes aceptar terminos",
+    message: "Debe aceptar terminos",
   }),
 });
 

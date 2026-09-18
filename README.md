@@ -20,17 +20,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Desiciones de Arquitectura y Cambios del parcial
 
-To learn more about Next.js, take a look at the following resources:
+1. El modelo cambio usando el return de CartContext provider y se agrupo en la logica de CartContextValue. Para la inmutabilidad se usaron metodos como map o filter.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Para los calculos se uso useState y para sincronizacion useEffect Se implemento totalItems y totalItems recorriendo los elementos con for, ademas se hizo use de useState y useEffect
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Para la arquitectura del formulario se uso CheckoutPage se uso el estado local de cada campo con useState y se uso touched para mostrar los mensajes de error cuando cambian.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Se uso Zod para la validacion de datos para hacer la validaciones , como la parte de caracteres o erroes de mensajes, y tambien usandolo para activar el boton ya validando los datos.
