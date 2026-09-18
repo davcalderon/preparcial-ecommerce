@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Desiciones de Arquitectura y Cambios del parcial
 
-1. El modelo cambio usando el return de CartContext provider y se agrupo en la logica de CartContextValue. Para la inmutabilidad se usaron metodos como map o filter.
+1. El modelo cambio usando el return de CartContext provider y se agrupo en la logica de CartContextValue. Para la inmutabilidad se usaron metodos como map o filter para recorrer y eliminar los elementos del carrito.
 
 2. Para los calculos se uso useState y para sincronizacion useEffect Se implemento totalItems y totalItems recorriendo los elementos con for, ademas se hizo use de useState y useEffect
 
